@@ -1,6 +1,6 @@
-# User Avatar & Menu Account
+# Custom Average Rating WooCommerce Extension
 
-Thank you for using the User Avatar & Menu Account plugin for WordPress. This plugin displays the logged-in user's avatar (or a default icon), their display name, and a customizable link. When WooCommerce is active, the link can automatically serve as a 'My Account' link, enhancing the user experience on your site. Lightweight and easy to integrate, it is fully customizable to match your site's design.
+Thank you for using the Custom Average Rating WooCommerce Extension plugin for WordPress. This plugin allows you to display the average rating from a custom API endpoint, providing an easy way to showcase product ratings dynamically. Designed for WooCommerce, it seamlessly integrates with any theme and supports flexible customization.
 
 This repository is intended for development and contributions. To download the plugin directly to your WordPress, grab a release from this repository and install the ZIP file via the "Plugins > Add New Plugin" screen in your WordPress.
 

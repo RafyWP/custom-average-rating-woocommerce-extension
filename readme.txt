@@ -1,6 +1,6 @@
-=== User Avatar & Menu Account ===
-Contributors:      rafywp
-Tags:              block
+=== Custom Average Rating WooCommerce Extension ===
+Contributors:      litcode
+Tags:              woocommerce, rating, star, block
 Requires at least: 6.7
 Requires PHP:      7.4
 Tested up to:      6.7
@@ -9,32 +9,32 @@ Donate link:       https://litcode.link/
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Displays the logged-in user's avatar (or icon), display name, and a custom link (e.g., 'My Account' for WooCommerce).
+Displays the average rating from a custom API endpoint for WooCommerce using a Gutenberg block.
 
 == Description ==
 
-This plugin displays the logged-in user's avatar (or a default icon), their display name, and a customizable link. When WooCommerce is active, the link can automatically serve as a 'My Account' link, enhancing the user experience on your site. Lightweight and easy to integrate, it is fully customizable to match your site's design.
+This plugin displays the average rating of WooCommerce products retrieved from a custom API endpoint. The Gutenberg block allows you to configure the API endpoint via a sidebar control, and on the front end the block fetches the rating data and displays it as a star rating. Lightweight and easy to integrate, it provides a simple way to showcase product ratings on your site.
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/user-avatar-menu-account` directory, or install the plugin directly from the WordPress plugins screen.
+1. Upload the plugin files to the `/wp-content/plugins/custom-average-rating-woocommerce-extension` directory, or install the plugin directly from the WordPress plugins screen.
 2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Configure the plugin settings if necessary from the WordPress admin area.
+3. Insert the "Custom Average Rating WooCommerce Extension" block into your post or page using the Gutenberg editor.
 
 == Frequently Asked Questions ==
 
-= How do I customize the link? =
+= How do I set the API endpoint? =
 
-You can modify the link via the plugin settings or by overriding the default template in your theme.
+You can set the API endpoint in the block's sidebar control when editing a post or page with the Gutenberg editor.
 
-= Does this plugin require WooCommerce? =
+= Is WooCommerce required? =
 
-No, WooCommerce is optional. When active, WooCommerce automatically enables the 'My Account' link functionality.
+Yes, WooCommerce must be active for this plugin to retrieve product ratings from your store.
 
 == Screenshots ==
 
-1. The plugin displayed on a WordPress site, showing the user avatar and account link.
-2. An example of the customizable link in action.
+1. The Gutenberg editor displaying the block with the API endpoint field.
+2. The front-end view showing the star rating based on the fetched average rating.
 
 == Upgrade Notice ==
 
@@ -44,4 +44,4 @@ No, WooCommerce is optional. When active, WooCommerce automatically enables the 
 == Changelog ==
 
 = 1.0.0 =
-* Initial release of the plugin.
+* Initial release of the Custom Average Rating WooCommerce Extension plugin.
