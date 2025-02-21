@@ -42,7 +42,7 @@ $total     	= intval( $data['total_products'] );
 $fullStars  = floor( $rating );
 $emptyStars = 5 - $fullStars;
 
-$total_reviews_txt = esc_html__( '%d products', 'custom-average-rating' );
+$total_reviews_txt = esc_html__( 'Rating: %d/5', 'custom-average-rating' );
 
 $svg_full   = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="gold" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>';
 
@@ -53,9 +53,11 @@ $tag_op= $link ? 'a href="' . $link . '" target="_blank"' : 'div';
 $tag_cl= $link ? 'a' : 'div';
 
 $html  = '<' . $tag_op . ' class="new-star-rating">';
+/*
 $html .= '<span class="number">';
 $html .= number_format( esc_html( $rating ), 1, '.' );
 $html .= '</span>';
+*/
 $html .= '<div class="rating">';
 $html .= '<div class="first-line">';
 $html .= '<div class="stars">';
@@ -64,7 +66,7 @@ $html .= str_repeat( $svg_empty, $emptyStars );
 $html .= '</div>';
 $html .= '</div>';
 $html .= '<div class="sec-line">';
-$html .= wp_sprintf( $total_reviews_txt, $total );
+$html .= wp_sprintf( $total_reviews_txt, esc_html( $rating ) );
 $html .= '</div>';
 $html .= '</div>';
 $html .= '</' . $tag_cl . '>';
