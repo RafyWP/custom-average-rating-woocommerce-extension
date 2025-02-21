@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "rafy/custom-average-rating-woocommerce-extension",
+	"version": "1.0.0",
+	"title": "Custom Average Rating WooCommerce Extension",
+	"category": "widgets",
+	"icon": "star-filled",
+	"description": "Displays the average rating from a custom API endpoint for WooCommerce.",
+	"example": {},
+	"attributes": {
+		"apiEndpoint": {
+			"type": "string",
+			"default": ""
+		},
+		"clickUrl": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"interactivity": {
+			"clientNavigation": true
+		}
+	},
+	"textdomain": "custom-average-rating",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
