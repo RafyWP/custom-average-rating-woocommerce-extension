@@ -1,6 +1,10 @@
 # Custom Average Rating WooCommerce Extension
 
-Thank you for using the Custom Average Rating WooCommerce Extension plugin for WordPress. This plugin allows you to display the average rating from a custom API endpoint, providing an easy way to showcase product ratings dynamically. Designed for WooCommerce, it seamlessly integrates with any theme and supports flexible customization.
+Thank you for using the Custom Average Rating WooCommerce Extension plugin for WordPress.
+
+Custom Average Rating WooCommerce Extension by Lit Code is a versatile plugin designed to both create and consume a custom API for showcasing product ratings. Seamlessly integrating with your WooCommerce store and any theme, it allows you to display individual product ratings or overall average ratings in real time.
+
+The plugin also includes a fully customizable Gutenberg block, making it easy to highlight authentic reviews and enhance credibility. With flexible configuration options and a user-friendly interface, this extension simplifies the process of managing and presenting dynamic ratings data, ultimately boosting customer trust and driving sales.
 
 This repository is intended for development and contributions. To download the plugin directly to your WordPress, grab a release from this repository and install the ZIP file via the "Plugins > Add New Plugin" screen in your WordPress.
 
