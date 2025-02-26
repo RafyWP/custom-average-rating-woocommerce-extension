@@ -31,6 +31,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+require_once plugin_dir_path(__FILE__) . 'includes/class-custom-average-rating.php';
+
+new CustomAverageRating();
+
+
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers all assets so they can be enqueued

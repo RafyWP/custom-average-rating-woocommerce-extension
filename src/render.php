@@ -15,6 +15,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+echo 'here';
+
 // Ensure $attributes is defined.
 if ( ! isset( $attributes ) ) {
 	$attributes = array();
