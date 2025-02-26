@@ -15,28 +15,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-echo 'here';
-
 // Ensure $attributes is defined.
 if ( ! isset( $attributes ) ) {
 	$attributes = array();
 }
 
 if ( empty( $attributes['apiEndpoint'] ) ) {
-	return '<p>' . esc_html__( 'No API endpoint provided.', 'custom-average-rating' ) . '</p>';
+	echo '<p>' . esc_html__( 'No API endpoint provided.', 'custom-average-rating' ) . '</p>';
+	return;
 }
 
 // Retrieve data from the API endpoint.
-$response = wp_remote_get( esc_url_raw( $attributes['apiEndpoint'] ) );
+$env = wp_get_environment_type() !== 'development';
+$response = wp_remote_get( esc_url_raw( $attributes['apiEndpoint'] ), ['sslverify' => $env] );
 if ( is_wp_error( $response ) ) {
-	return '<p>' . esc_html__( 'Error retrieving rating data.', 'custom-average-rating' ) . '</p>';
+	echo '<p>' . esc_html__( 'Error retrieving rating data.', 'custom-average-rating' ) . '</p>';
+	return;
 }
 
 $body = wp_remote_retrieve_body( $response );
 $data = json_decode( $body, true );
 
 if ( empty( $data ) || ! isset( $data['average_rating'] ) ) {
-	return '<p>' . esc_html__( 'Rating data not found.', 'custom-average-rating' ) . '</p>';
+	echo '<p>' . esc_html__( 'Rating data not found.', 'custom-average-rating' ) . '</p>';
+	return;
 }
 
 $rating     = floatval( $data['average_rating'] );

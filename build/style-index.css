@@ -1,1 +1,41 @@
-.new-star-rating{display:flex;gap:.5em;text-decoration:none}.new-star-rating .number{align-items:center;background-color:var(--wp--preset--color--contrast);border-radius:.5em;color:var(--wp--preset--color--base);display:flex;font-weight:700;padding:0 1em}.new-star-rating .rating{display:flex;flex-direction:column;gap:.15em}.new-star-rating .rating .first-line,.new-star-rating .rating .first-line .stars,.new-star-rating .rating .sec-line{display:flex;justify-content:center}.new-star-rating .rating .first-line{gap:.5em}.new-star-rating .rating .sec-line{font-size:14px;font-weight:600}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the block editor.
+ */
+.new-star-rating {
+  display: flex;
+  gap: 0.5em;
+  text-decoration: none;
+}
+.new-star-rating .number {
+  display: flex;
+  align-items: center;
+  background-color: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--base);
+  font-weight: bold;
+  padding: 0 1em;
+  border-radius: 0.5em;
+}
+.new-star-rating .rating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+}
+.new-star-rating .rating .first-line,
+.new-star-rating .rating .sec-line,
+.new-star-rating .rating .first-line .stars {
+  display: flex;
+  justify-content: center;
+}
+.new-star-rating .rating .first-line {
+  gap: 0.5em;
+}
+.new-star-rating .rating .sec-line {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style-index.css.map*/
