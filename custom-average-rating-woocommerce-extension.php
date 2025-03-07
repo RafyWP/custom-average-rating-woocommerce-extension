@@ -14,7 +14,7 @@
  * Plugin Name:       Custom Average Rating WooCommerce Extension
  * Plugin URI:        https://litcode.store/product/custom-average-rating-woocommerce-extension/
  * Description:       Displays the average rating from a custom API endpoint for WooCommerce.
- * Version:           1.1.0
+ * Version:           1.1.2
  * Requires at least: 6.7
  * Requires PHP:      7.4
  * Author:            Lit ✴ Code
@@ -34,7 +34,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once plugin_dir_path(__FILE__) . 'includes/class-custom-average-rating.php';
 
 new CustomAverageRating();
-
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.

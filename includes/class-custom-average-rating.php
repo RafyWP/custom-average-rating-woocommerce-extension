@@ -109,7 +109,7 @@ class CustomAverageRating
 
         if (empty($product_id)) {
             return new WP_Error('no_product_id', 'Invalid product ID.', ['status' => 400]);
-        }
+        }        
 
         $star_rating = get_post_meta($product_id, '_star_rating', true);
 
@@ -117,9 +117,35 @@ class CustomAverageRating
             $star_rating = get_post_meta($product_id, '_wc_average_rating', true);
         }
 
+        $comments = get_comments([
+            'post_id' => $product_id,
+            'status'  => 'approve',
+            'orderby' => 'comment_date',
+            'order'   => 'DESC',
+        ]);
+
+        $comments_data = [];
+
+        foreach ($comments as $comment) {
+            $rating = get_comment_meta($comment->comment_ID, 'rating', true);
+            $avatar_url = get_avatar_url($comment->user_id, ['size' => 48]);
+
+            $display_name = $comment->user_id ? get_the_author_meta('display_name', $comment->user_id) : $comment->comment_author;
+
+            $comments_data[] = [
+                'comment_id'   => $comment->comment_ID,
+                'author'       => $display_name,
+                'avatar'       => $avatar_url,
+                'content'      => $comment->comment_content,
+                'date'         => $comment->comment_date,
+                'rating'       => !empty($rating) ? intval($rating) : null,
+            ];
+        }
+
         return [
             'product_id'  => $product_id,
             'star_rating' => $star_rating,
+            'comments'    => $comments_data,
         ];
     }
 

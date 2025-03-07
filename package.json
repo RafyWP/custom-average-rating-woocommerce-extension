@@ -1,6 +1,6 @@
 {
 	"name": "custom-average-rating-woocommerce-extension",
-	"version": "1.1.0",
+	"version": "1.1.2",
 	"description": "Displays the average rating from a custom API endpoint for WooCommerce.",
 	"author": "Lit ✴ Code",
 	"license": "GPL-2.0-or-later",

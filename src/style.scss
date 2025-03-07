@@ -4,8 +4,8 @@
  */
 .new-star-rating {
     display: flex;
-    gap: 0.5em;
-    text-decoration: none;
+    gap: 1.8em;
+    justify-content: center;
 
     .number {
         display: flex;
@@ -21,6 +21,7 @@
         display: flex;
         flex-direction: column;
         gap: 0.15em;
+        text-decoration: none;
     
         .first-line,
         .sec-line,
@@ -31,5 +32,24 @@
     
         .first-line { gap: .5em; }
         .sec-line { font-size: 14px; font-weight: 600; }
-    }    
+    }
+    
+    .avatars {
+        display: flex;
+        
+        img {
+            border: 4px solid var(--wp--preset--color--base);
+            border-radius: 28px;
+            margin-left: -12px;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.2s ease-in-out;            
+
+            &:hover {
+                transform: scale(1.26087);
+                filter: sepia(50%) hue-rotate(220deg) saturate(200%);
+                z-index: 10 !important;
+            }
+        }
+    }
 }
